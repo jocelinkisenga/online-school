@@ -7,8 +7,8 @@ use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\Notifiable;
 use Laravel\Sanctum\HasApiTokens;
-use App\Models\Video;
-use App\Models\Comment;
+use App\Models\Candidature;
+use App\Models\Course;
 
 
 class User extends Authenticatable
@@ -26,11 +26,11 @@ class User extends Authenticatable
         'password',
     ];
 
-    public function videos() {
-        return $this->hasMany(Video::class);
+    public function candidatures() {
+        return $this->hasMany(Candidature::class);
     }
-    public function comments () {
-        return $this->hasMany(Comment::class);
+    public function courses () {
+        return $this->hasMany(Course::class);
     }
        
     /**

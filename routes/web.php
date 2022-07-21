@@ -16,16 +16,10 @@ Route::get('/',[App\Http\Controllers\HomeController::class,'index'])->name('home
 
 
 Route::middleware('auth')->group(function(){
-   
-});
-
-Route::middleware(['auth','admin'])->prefix('admin')->group(function(){
-        Route::get('/admin',[App\Http\Controllers\DashboardController::class,'index'])->name('dashboard');
+        Route::get('candidature/',[App\Http\Controllers\CandidatureController::class,'store'])->name('candidature');
 });
 
 
-Route::get('/dashboard', function () {
-    return view('dashboard');
-})->middleware(['auth'])->name('dashboard');
+require __DIR__.'/admin.php';
 
 require __DIR__.'/auth.php';

@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Candidature;
 use Illuminate\Http\Request;
+use Auth;
 
 class CandidatureController extends Controller
 {
@@ -14,7 +15,9 @@ class CandidatureController extends Controller
      */
     public function index()
     {
-        //
+        $candidatures = Candidature::orderBy('id','desc')->get();
+        
+        return view('admin.review',['candidatures'=>$candidatures]);
     }
 
     /**
@@ -33,9 +36,11 @@ class CandidatureController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store()
     {
-        //
+        $user_id = Auth::user()->id;
+        Candidature::create(['user_id' =>$user_id]);
+        return redirect('/');
     }
 
     /**
@@ -67,9 +72,12 @@ class CandidatureController extends Controller
      * @param  \App\Models\Candidature  $candidature
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Candidature $candidature)
+    public function update(int $id)
     {
-        //
+        $candidature_update = Candidature::find($id);
+       
+        $candidature_update->update(['confirmed'=>1]);
+        return redirect('/');
     }
 
     /**

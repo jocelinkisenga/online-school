@@ -15,8 +15,8 @@ return new class extends Migration
     {
         Schema::create('candidatures', function (Blueprint $table) {
             $table->id();
-            $table->foreignId('teacher_id');
-            $table->boolean('comfirmed')->nullable();
+            $table->foreignId('user_id');
+            $table->boolean('confirmed')->nullable();
             $table->timestamps();
         });
     }

@@ -45,11 +45,7 @@ class RegisteredUserController extends Controller
             'password' => Hash::make($request->password),
         ]);
 
-        $user_id = $user->id;
-        if($user_id === 1) {
-            RegisteredUserController::update_user($user_id);
-        }
-
+      
         event(new Registered($user));
 
         Auth::login($user);
@@ -57,8 +53,5 @@ class RegisteredUserController extends Controller
         return redirect(RouteServiceProvider::HOME);
     }
 
-    public static function update_user($id){
-            $user = User::find($id);
-            $user->update(['role_admin'=>1]);
-    }
+
 }

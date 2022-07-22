@@ -1,5 +1,5 @@
-# youtube clone
-<p>This is a small laravel week challenge between me and my friend @elvinkyungu for cloning a simple basic youtube application by using laravel and simple html and css </p>
+# online school app
+<p>This is a small laravel week challengefor cloning a simple basic youtube application by using laravel and simple html and css </p>
 
 ## instalation
 

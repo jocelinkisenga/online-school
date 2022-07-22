@@ -3,8 +3,9 @@
 
 ## instalation
 
-. clone the project on your local machine
-. configuer your database connection
-. run migration
+. clone the project on your local machine <br>
+. run ``` npm install & npm run dev ```
+. configuer your database connection <br>
+. run migration <br>
 . then run the artisan server
 

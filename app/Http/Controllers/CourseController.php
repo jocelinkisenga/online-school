@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Course;
+use App\Models\Category;
 use Illuminate\Http\Request;
 
 class CourseController extends Controller
@@ -24,7 +25,8 @@ class CourseController extends Controller
      */
     public function create()
     {
-        return view('admin.add-course');
+        $categories = Category::all();
+        return view('admin.add-course',['categories'=>$categories]);
     }
 
     /**
@@ -35,7 +37,19 @@ class CourseController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $new_file_name = time().'_'.$request->file('photo')->getClientOriginalName();
+        $path = $request->file('photo')->storeAs('uploads',$new_file_name,'public_uploads');
+       
+
+        Course::create([
+            'user_id'=>$request->user_id,
+            'title'=>$request->title,
+            'description'=>$request->description,
+            'photo'=>$new_file_name,
+            'categorie_id'=>$request->categorie_id
+            ]);
+
+        return redirect('/');
     }
 
     /**

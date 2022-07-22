@@ -301,7 +301,8 @@
 							<h4>Add course</h4>
 						</div>
 						<div class="widget-inner">
-							<form class="edit-profile m-b30">
+							<form class="edit-profile m-b30" action="{{route('course-store')}}" method="POST" enctype="multipart/form-data">
+								@csrf
 								<div class="row">
 									<div class="col-12">
 										<div class="ml-auto">
@@ -311,35 +312,24 @@
 									<div class="form-group col-6">
 										<label class="col-form-label">Course title</label>
 										<div>
-											<input class="form-control" type="text" value="">
+											<input class="form-control" type="text" value="" name="title">
 										</div>
-									</div>
-									<div class="form-group col-6">
-										<label class="col-form-label">Course title</label>
 										<div>
-											<input class="form-control" type="text" value="">
+											<input class="form-control" type="hidden" name="user_id" value="{{Auth::user()->id}}">
 										</div>
 									</div>
+
 									<div class="form-group col-6">
-										<label class="col-form-label">Course start</label>
+										<label class="col-form-label">Categorie name</label>
 										<div>
-											<input class="form-control" type="text" value="">
+											<select class="c-select" name="categorie_id">
+												<option selected>select a Categorie</option>
+											@foreach($categories as $categorie)
+												<option value="{{$categorie->id}}">{{$categorie->title}}</option>
+											@endforeach	
+											</select>
 										</div>
 									</div>
-									<div class="form-group col-6">
-										<label class="col-form-label">Course expire</label>
-										<div>
-											<input class="form-control" type="text" value="">
-										</div>
-									</div>
-									<div class="form-group col-6">
-										<label class="col-form-label">Teacher name</label>
-										<div>
-											<input class="form-control" type="text" value="">
-										</div>
-									</div>
-									<div class="seperator"></div>
-									
 									<div class="col-12 m-t20">
 										<div class="ml-auto m-b5">
 											<h3>2. Description</h3>
@@ -348,51 +338,20 @@
 									<div class="form-group col-12">
 										<label class="col-form-label">Course description</label>
 										<div>
-											<textarea class="form-control"> </textarea>
+											<textarea class="form-control" name="description"> </textarea>
 										</div>
 									</div>
-									<div class="col-12 m-t20">
-										<div class="ml-auto">
-											<h3 class="m-form__section">3. Add Item</h3>
-										</div>
+									<div class="form-group col-12">
+									<label class="col-form-label">Course image</label>
+										
+										<label class="file">
+											<input type="file" id="file" name="photo">
+											<span class="file-custom"></span>
+										</label>
 									</div>
+									
 									<div class="col-12">
-										<table id="item-add" style="width:100%;">
-											<tr class="list-item">
-												<td>
-													<div class="row">
-														<div class="col-md-4">
-															<label class="col-form-label">Course Name</label>
-															<div>
-																<input class="form-control" type="text" value="">
-															</div>
-														</div>
-														<div class="col-md-3">
-															<label class="col-form-label">Course Category</label>
-															<div>
-																<input class="form-control" type="text" value="">
-															</div>
-														</div>
-														<div class="col-md-3">
-															<label class="col-form-label">Course Category</label>
-															<div>
-																<input class="form-control" type="text" value="">
-															</div>
-														</div>
-														<div class="col-md-2">
-															<label class="col-form-label">Close</label>
-															<div class="form-group">
-																<a class="delete" href="#"><i class="fa fa-close"></i></a>
-															</div>
-														</div>
-													</div>
-												</td>
-											</tr>
-										</table>
-									</div>
-									<div class="col-12">
-										<button type="button" class="btn-secondry add-item m-r5"><i class="fa fa-fw fa-plus-circle"></i>Add Item</button>
-										<button type="reset" class="btn">Save changes</button>
+										<button type="submit" class="btn">Save course</button>
 									</div>
 								</div>
 							</form>

@@ -331,7 +331,11 @@
 											<p></p>	
 										</div>
 										<div class="col-md-12">
-											<a href="{{route('candidature-confirm',['id'=>$candidature->id])}}" class="btn">confirm</a>
+										<form action="{{route('candidature-confirm')}}" method="POST">
+											@csrf
+											<input type="hidden" name="id" value="{{$candidature->id}}">
+											<button type="submit" class="btn">confirm</button>
+										</form>
 										</div>
 									</div>
 								</div>

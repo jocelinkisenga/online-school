@@ -96,9 +96,15 @@ class CourseController extends Controller
      * @param  \App\Models\Course  $course
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Course $course)
+    public function update($id)
     {
-        //
+
+        $course = Course::find($id);
+        if ($course){
+            $course->update(['confirmed'=>1]);
+        }
+
+        return redirect('/');
     }
 
     /**

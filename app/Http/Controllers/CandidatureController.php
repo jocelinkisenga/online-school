@@ -15,7 +15,7 @@ class CandidatureController extends Controller
      */
     public function index()
     {
-        $candidatures = Candidature::orderBy('id','desc')->get();
+        $candidatures = Candidature::orderBy('id','desc')->where('confirmed',null)->get();
         
         return view('admin.review',['candidatures'=>$candidatures]);
     }
@@ -72,11 +72,11 @@ class CandidatureController extends Controller
      * @param  \App\Models\Candidature  $candidature
      * @return \Illuminate\Http\Response
      */
-    public function update(int $id)
+    public function update(Request $request)
     {
-        $candidature_update = Candidature::find($id);
-       
+        $candidature_update = Candidature::find($request->id);
         $candidature_update->update(['confirmed'=>1]);
+       
         return redirect('/');
     }
 

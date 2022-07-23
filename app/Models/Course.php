@@ -9,7 +9,7 @@ use App\Models\User;
 class Course extends Model
 {
     use HasFactory;
-    protected $fillable = ['user_id','title','description','photo','categorie_id'];
+    protected $fillable = ['user_id','confirmed','title','description','photo','categorie_id'];
 
     public function user(){
         return $this->belongsTo(User::class);

@@ -328,7 +328,7 @@
 									<div class="row card-courses-dec">
 										<div class="col-md-12">
 											<h6 class="m-b10">Best Quality Product</h6>
-											<p></p>	
+											<p>{{$course->description}}</p>	
 										</div>
 										<div class="col-md-12">
 											<a href="{{route('course-confirm',['id'=>$course->id])}}" class="btn">confirm</a>

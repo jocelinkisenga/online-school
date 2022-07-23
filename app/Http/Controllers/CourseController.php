@@ -18,6 +18,18 @@ class CourseController extends Controller
         //
     }
 
+     /**
+     * Display a listing of the resource of courses not confirmed.
+     *
+     * @return \Illuminate\Http\Response
+     */
+    public function not_confirmed()
+    {
+        $courses = Course::whereConfirmed(null)->get();
+        return view('admin.confirm-course',['courses'=>$courses]);
+    }
+
+
     /**
      * Show the form for creating a new resource.
      *
@@ -28,6 +40,9 @@ class CourseController extends Controller
         $categories = Category::all();
         return view('admin.add-course',['categories'=>$categories]);
     }
+
+
+
 
     /**
      * Store a newly created resource in storage.

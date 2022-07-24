@@ -13,7 +13,7 @@ use Illuminate\Support\Facades\Route;
 |
 */
 Route::get('/',[App\Http\Controllers\HomeController::class,'index'])->name('home');
-
+Route::get('/course/{id}',[App\Http\Controllers\CourseController::class,'show'])->name('course-detail');
 
 Route::middleware('auth')->group(function(){
         Route::get('candidature/',[App\Http\Controllers\CandidatureController::class,'store'])->name('candidature');

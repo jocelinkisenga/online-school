@@ -54,9 +54,11 @@
 	<!-- REVOLUTION SLIDER END -->	
 </head>
 <body id="bg">
-
+<div class="page-wraper">
+<!-- <div id="loading-icon-bx"></div> ============= -->
+@include('components.header')
 @yield('content')
-
+</div>
 <!-- External JavaScripts -->
 <script src="{{asset('assets/js/jquery.min.js')}}"></script>
 <script src="{{asset('assets/vendors/bootstrap/js/popper.min.js')}}"></script>

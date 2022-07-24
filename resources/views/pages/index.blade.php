@@ -91,7 +91,7 @@
 									<li><a href="javascript:;">FAQ's<i class="fa fa-angle-right"></i></a>
 										<ul class="sub-menu">
 											<li><a href="faq-1.html">FAQ's 1</a></li>
-											<li><a href="faq-2.html">FAQ's 2</a></li>
+											<li><a href="faq-2.html">FAQs 2</a></li>
 										</ul>
 									</li>
 									<li><a href="javascript:;">Contact Us<i class="fa fa-angle-right"></i></a>
@@ -291,7 +291,7 @@
 								data-paddingbottom="[0,0,0,0]"
 								data-paddingleft="[0,0,0,0]"
 								style="z-index: 7; text-transform:capitalize; white-space: unset; color:#fff; font-family:rubik; font-size:18px; line-height:28px; font-weight:400;">
-									 Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the
+									 Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry s standard dummy text ever since the
 							</div>
 							<!-- LAYER NR. 4 -->
 							<div class="tp-caption Newspaper-Button rev-btn " 
@@ -449,7 +449,7 @@
 								data-paddingbottom="[0,0,0,0]"
 								data-paddingleft="[0,0,0,0]"
 								style="z-index: 7; text-transform:capitalize; white-space: unset; color:#fff; font-family:rubik; font-size:18px; line-height:28px; font-weight:400;">
-									 Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the
+									 Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry s standard dummy text ever since the
 							</div>
 							<!-- LAYER NR. 4 -->
 							<div class="tp-caption Newspaper-Button rev-btn " 
@@ -561,15 +561,16 @@
 					</div>
 					<div class="row">
 					<div class="courses-carousel owl-carousel owl-btn-1 col-12 p-lr0">
+						@foreach($courses as $course)
 						<div class="item">
 							<div class="cours-bx">
 								<div class="action-box">
-									<img src="assets/images/courses/pic1.jpg" alt="">
+									<img src="{{asset('uploads/uploads/'.$course->photo)}}" alt="">
 									<a href="#" class="btn">Read More</a>
 								</div>
 								<div class="info-bx text-center">
-									<h5><a href="#">Introduction EduChamp – LMS plugin</a></h5>
-									<span>Programming</span>
+									<h5><a href="#">{{$course->title}}</a></h5>
+									<span>{{$course->categorie->title}}</span>
 								</div>
 								<div class="cours-more-info">
 									<div class="review">
@@ -589,90 +590,8 @@
 								</div>
 							</div>
 						</div>
-						<div class="item">
-							<div class="cours-bx">
-								<div class="action-box">
-									<img src="assets/images/courses/pic2.jpg" alt="">
-									<a href="#" class="btn">Read More</a>
-								</div>
-								<div class="info-bx text-center">
-									<h5><a href="#">Introduction EduChamp – LMS plugin</a></h5>
-									<span>Programming</span>
-								</div>
-								<div class="cours-more-info">
-									<div class="review">
-										<span>3 Review</span>
-										<ul class="cours-star">
-											<li class="active"><i class="fa fa-star"></i></li>
-											<li class="active"><i class="fa fa-star"></i></li>
-											<li class="active"><i class="fa fa-star"></i></li>
-											<li><i class="fa fa-star"></i></li>
-											<li><i class="fa fa-star"></i></li>
-										</ul>
-									</div>
-									<div class="price">
-										<del>$190</del>
-										<h5>$120</h5>
-									</div>
-								</div>
-							</div>
-						</div>
-						<div class="item">
-							<div class="cours-bx">
-								<div class="action-box">
-									<img src="assets/images/courses/pic3.jpg" alt="">
-									<a href="#" class="btn">Read More</a>
-								</div>
-								<div class="info-bx text-center">
-									<h5><a href="#">Introduction EduChamp – LMS plugin</a></h5>
-									<span>Programming</span>
-								</div>
-								<div class="cours-more-info">
-									<div class="review">
-										<span>3 Review</span>
-										<ul class="cours-star">
-											<li class="active"><i class="fa fa-star"></i></li>
-											<li class="active"><i class="fa fa-star"></i></li>
-											<li class="active"><i class="fa fa-star"></i></li>
-											<li><i class="fa fa-star"></i></li>
-											<li><i class="fa fa-star"></i></li>
-										</ul>
-									</div>
-									<div class="price">
-										<del>$190</del>
-										<h5>$120</h5>
-									</div>
-								</div>
-							</div>
-						</div>
-						<div class="item">
-							<div class="cours-bx">
-								<div class="action-box">
-									<img src="assets/images/courses/pic4.jpg" alt="">
-									<a href="#" class="btn">Read More</a>
-								</div>
-								<div class="info-bx text-center">
-									<h5><a href="#">Introduction EduChamp – LMS plugin</a></h5>
-									<span>Programming</span>
-								</div>
-								<div class="cours-more-info">
-									<div class="review">
-										<span>3 Review</span>
-										<ul class="cours-star">
-											<li class="active"><i class="fa fa-star"></i></li>
-											<li class="active"><i class="fa fa-star"></i></li>
-											<li class="active"><i class="fa fa-star"></i></li>
-											<li><i class="fa fa-star"></i></li>
-											<li><i class="fa fa-star"></i></li>
-										</ul>
-									</div>
-									<div class="price">
-										<del>$190</del>
-										<h5>$120</h5>
-									</div>
-								</div>
-							</div>
-						</div>
+						@endforeach
+						
 					</div>
 					</div>
 				</div>

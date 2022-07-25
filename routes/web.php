@@ -17,6 +17,9 @@ Route::get('/course/{id}',[App\Http\Controllers\CourseController::class,'show'])
 
 Route::middleware('auth')->group(function(){
         Route::get('candidature/',[App\Http\Controllers\CandidatureController::class,'store'])->name('candidature');
+        Route::get('profile/',[App\Http\Controllers\ProfileController::class,'create'])->name('profile');
+        Route::post('profile/',[App\Http\Controllers\ProfileController::class,'store'])->name('profile-store');
+
 });
 
 

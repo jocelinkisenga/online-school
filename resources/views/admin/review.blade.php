@@ -310,7 +310,9 @@
 										<ul class="card-courses-view">
 											<li class="card-courses-user">
 												<div class="card-courses-user-pic">
-													<img src="{{asset('aassets/images/testimonials/pic3.jpg')}}" alt=""/>
+												    @if($candidature->user->avatar)
+													<img src="{{asset('uploads/uploads/'.$candidature->user->avatar)}}" alt=""/>
+													@endif
 												</div>
 												<div class="card-courses-user-info">
 													<h5>candidate</h5>
@@ -334,6 +336,7 @@
 										<form action="{{route('candidature-confirm')}}" method="POST">
 											@csrf
 											<input type="hidden" name="id" value="{{$candidature->id}}">
+											<input type="hidden" name="user_id" value="{{$candidature->user->id}}">
 											<button type="submit" class="btn">confirm</button>
 										</form>
 										</div>

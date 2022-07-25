@@ -455,15 +455,15 @@
 									<div class="icon-box">
 										<h3><i class="ti-user"></i><span class="counter">5</span>M</h3>
 									</div>
-									<span class="cours-search-text">Over 5 million student</span>
+									<span class="cours-search-text">{{$count_user}} student</span>
 								</div>
 							</div>
 							<div class="col-md-4 col-sm-6">
 								<div class="cours-search-bx m-b30">
 									<div class="icon-box">
-										<h3><i class="ti-book"></i><span class="counter">30</span>K</h3>
+										<h3><i class="ti-book"></i><span class="counter">{{$count_course}}</span></h3>
 									</div>
-									<span class="cours-search-text">30,000 Courses.</span>
+									<span class="cours-search-text">{{$count_course}} Courses.</span>
 								</div>
 							</div>
 							<div class="col-md-4 col-sm-12">
@@ -479,6 +479,7 @@
 				</div>
 			</div>
 			<!-- Form END -->
+		 <!-- 
 			<div class="section-area section-sp2">
 				<div class="container">
 					<div class="row">
@@ -507,7 +508,7 @@
 											<li><a href="#"><i class="fa fa-clock-o"></i> 7:00am 8:00am</a></li>
 											<li><a href="#"><i class="fa fa-map-marker"></i> Berlin, Germany</a></li>
 										</ul>
-										<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the..</p>
+										<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry s standard dummy text ever since the..</p>
 									</div>
 								</div>
 							</div>
@@ -553,7 +554,7 @@
 											<li><a href="#"><i class="fa fa-clock-o"></i> 7:00am 8:00am</a></li>
 											<li><a href="#"><i class="fa fa-map-marker"></i> Berlin, Germany</a></li>
 										</ul>
-										<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the..</p>
+										<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry s standard dummy text ever since the..</p>
 									</div>
 								</div>
 							</div>
@@ -566,7 +567,7 @@
 				</div>
 			</div>
 			
-			<!-- Testimonials -->
+			 Testimonials 
 			<div class="section-area section-sp2 bg-fix ovbl-dark" style="background-image:url(assets/images/background/bg1.jpg);">
                 <div class="container">
 					<div class="row">
@@ -607,7 +608,7 @@
 					</div>
 				</div>
 			</div>
-			<!-- Testimonials END -->
+			Testimonials END -->
 			
 			<!-- Recent News -->
 			<div class="section-area section-sp2">

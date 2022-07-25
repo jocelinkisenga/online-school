@@ -23,14 +23,25 @@ class User extends Authenticatable
     protected $fillable = [
         'name',
         'email',
+        'avatar',
+        'role_admin',
+        'role_teacher',
         'password',
+        'occupation',
+        'adresse',
+        'post_codes',
+        'phone',
+        'linkedin',
+        'twitter',
+        'description'
     ];
 
-    public function candidatures() {
-        return $this->hasMany(Candidature::class);
-    }
     public function courses () {
         return $this->hasMany(Course::class);
+    }
+
+    public function candidature(){
+        return $this->belongsTo(Candidature::class);
     }
        
     /**

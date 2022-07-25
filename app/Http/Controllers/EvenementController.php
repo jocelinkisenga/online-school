@@ -2,12 +2,10 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Candidature;
+use App\Models\Evenement;
 use Illuminate\Http\Request;
-use Auth;
-use App\Models\User;
 
-class CandidatureController extends Controller
+class EvenementController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -16,9 +14,7 @@ class CandidatureController extends Controller
      */
     public function index()
     {
-        $candidatures = Candidature::orderBy('id','desc')->where('confirmed',null)->get();
-        
-        return view('admin.review',['candidatures'=>$candidatures]);
+        //
     }
 
     /**
@@ -37,20 +33,18 @@ class CandidatureController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store()
+    public function store(Request $request)
     {
-        $user_id = Auth::user()->id;
-        Candidature::create(['user_id' =>$user_id]);
-        return redirect('/');
+        //
     }
 
     /**
      * Display the specified resource.
      *
-     * @param  \App\Models\Candidature  $candidature
+     * @param  \App\Models\Evenement  $evenement
      * @return \Illuminate\Http\Response
      */
-    public function show(Candidature $candidature)
+    public function show(Evenement $evenement)
     {
         //
     }
@@ -58,10 +52,10 @@ class CandidatureController extends Controller
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  \App\Models\Candidature  $candidature
+     * @param  \App\Models\Evenement  $evenement
      * @return \Illuminate\Http\Response
      */
-    public function edit(Candidature $candidature)
+    public function edit(Evenement $evenement)
     {
         //
     }
@@ -70,26 +64,21 @@ class CandidatureController extends Controller
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  \App\Models\Candidature  $candidature
+     * @param  \App\Models\Evenement  $evenement
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request)
+    public function update(Request $request, Evenement $evenement)
     {
-        $candidature_update = Candidature::find($request->id);
-        $user = User::findOrFail($request->user_id);
-        $candidature_update->update(['confirmed'=>1]);
-        $user->update(['role_teacher'=>1]);
-       
-        return redirect('/');
+        //
     }
 
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\Models\Candidature  $candidature
+     * @param  \App\Models\Evenement  $evenement
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Candidature $candidature)
+    public function destroy(Evenement $evenement)
     {
         //
     }

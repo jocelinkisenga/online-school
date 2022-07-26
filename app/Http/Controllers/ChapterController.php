@@ -24,7 +24,7 @@ class ChapterController extends Controller
      */
     public function create(int $course_id)
     {
-        return view('admin.add-chapter',['courseId'=>$course_id]);
+        return view('pages.add-chapter',['courseId'=>$course_id]);
     }
 
     /**
@@ -35,7 +35,16 @@ class ChapterController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $new_file = time().'_chapter'.$request->file('cover')->getClientOriginalName();
+        $path = $request->file('cover')->storeAs('uploads',$new_file,'public_uploads');
+
+        Chapter::create([
+                'course_id'=>$request->course_id,
+                'title'=>$request->title,
+                'description'=>$request->description,
+                'cover'=>$request->cover
+            ]);
+        return redirect('/');
     }
 
     /**

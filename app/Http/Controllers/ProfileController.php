@@ -4,12 +4,15 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\User;
+use App\Models\Course;
 use Auth;
+
 
 class ProfileController extends Controller
 {
     public function create(){
-        return view('pages.profile');
+        $my_courses = Course::whereUser_id(Auth::user()->id)->get();
+        return view('pages.profile',['myCourses'=>$my_courses]);
     }
 
     public function store(Request $request){

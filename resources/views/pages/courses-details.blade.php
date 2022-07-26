@@ -31,52 +31,22 @@
 			<div class="section-area section-sp1">
                 <div class="container">
 					 <div class="row d-flex flex-row-reverse">
+					 @auth
+					 @if(Auth::user()->role_teacher == 1)
 						<div class="col-lg-3 col-md-4 col-sm-12 m-b30">
 							<div class="course-detail-bx">
-								<div class="course-price">
-									<del>$190</del>
-									<h4 class="price">$120</h4>
-								</div>	
+								
 								<div class="course-buy-now text-center">
-									<a href="#" class="btn radius-xl text-uppercase">Buy Now This Courses</a>
+									<a href="#" class="btn radius-xl text-uppercase">Add a chapter</a>
 								</div>
-								<div class="teacher-bx">
-									<div class="teacher-info">
-										<div class="teacher-thumb">
-											<img src="assets/images/testimonials/pic1.jpg" alt=""/>
-										</div>
-										<div class="teacher-name">
-											<h5>Hinata Hyuga</h5>
-											<span>Science Teacher</span>
-										</div>
-									</div>
-								</div>
-								<div class="cours-more-info">
-									<div class="review">
-										<span>3 Review</span>
-										<ul class="cours-star">
-											<li class="active"><i class="fa fa-star"></i></li>
-											<li class="active"><i class="fa fa-star"></i></li>
-											<li class="active"><i class="fa fa-star"></i></li>
-											<li><i class="fa fa-star"></i></li>
-											<li><i class="fa fa-star"></i></li>
-										</ul>
-									</div>
-									<div class="price categories">
-										<span>Categories</span>
-										<h5 class="text-primary">Frontend</h5>
-									</div>
-								</div>
-								<div class="course-info-list scroll-page">
-									<ul class="navbar">
-										<li><a class="nav-link" href="#overview"><i class="ti-zip"></i>Overview</a></li>
-										<li><a class="nav-link" href="#curriculum"><i class="ti-bookmark-alt"></i>Curriculum</a></li>
-										<li><a class="nav-link" href="#instructor"><i class="ti-user"></i>Instructor</a></li>
-										<li><a class="nav-link" href="#reviews"><i class="ti-comments"></i>Reviews</a></li>
-									</ul>
-								</div>
+					
+								
+								
 							</div>
 						</div>
+
+					@endif
+					@endauth
 					
 						<div class="col-lg-9 col-md-8 col-sm-12">
 							<div class="courses-post">
@@ -135,7 +105,7 @@
 								<h4>Instructor</h4>
 								<div class="instructor-bx">
 									<div class="instructor-author">
-										<img src="assets/images/testimonials/pic1.jpg" alt="">
+										<img src="{{asset('uploads/uploads/'.$course->user->avatar)}}" alt="{{$course->user->name}}">
 									</div>
 									<div class="instructor-info">
 										<h6>{{$course->user->name}} </h6>
@@ -146,7 +116,7 @@
 											<li><a href="#" class="btn sharp-sm linkedin"><i class="fa fa-linkedin"></i></a></li>
 											<li><a href="#" class="btn sharp-sm google-plus"><i class="fa fa-google-plus"></i></a></li>
 										</ul>
-										<p class="m-b0">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industrys standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries</p>
+										<p class="m-b0">{{$course->user->description}}</p>
 									</div>
 								</div>
 								

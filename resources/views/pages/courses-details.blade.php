@@ -37,7 +37,7 @@
 							<div class="course-detail-bx">
 								
 								<div class="course-buy-now text-center">
-									<a href="#" class="btn radius-xl text-uppercase">Add a chapter</a>
+									<a href="{{route('chapter-create',['course_id'=>$course->id])}}" class="btn radius-xl text-uppercase">Add a chapter</a>
 								</div>
 					
 								

@@ -1,4 +1,4 @@
-@extends('layouts.admin')
+@extends('layouts.chapter')
 
 @section('content')
 	
@@ -301,7 +301,7 @@
 							<h4>Add course</h4>
 						</div>
 						<div class="widget-inner">
-							<form class="edit-profile m-b30" action="{{route('course-store')}}" method="POST" enctype="multipart/form-data">
+							<form class="edit-profile m-b30" action="{{route('chapter-store')}}" method="POST" enctype="multipart/form-data">
 								@csrf
 								<div class="row">
 									<div class="col-12">
@@ -309,49 +309,40 @@
 											<h3>1. Basic info</h3>
 										</div>
 									</div>
+									<div class="form-group col-12">
+									<label class="col-form-label">Cover image</label>
+										
+										<label class="file">
+											<input type="file" id="file" name="cover">
+											<span class="file-custom"></span>
+										</label>
+									</div>
 									<div class="form-group col-6">
-										<label class="col-form-label">Course title</label>
+										<label class="col-form-label">Chapter title</label>
 										<div>
 											<input class="form-control" type="text" value="" name="title">
 										</div>
 										<div>
-											<input class="form-control" type="hidden" name="user_id" value="{{Auth::user()->id}}">
+											<input class="form-control" type="hidden" name="course_id" value="{{$courseId}}">
 										</div>
 									</div>
 
-									<div class="form-group col-6">
-										<label class="col-form-label">Categorie name</label>
-										<div>
-											<select class="c-select" name="categorie_id">
-												<option selected>select a Categorie</option>
-											@foreach($categories as $categorie)
-												<option value="{{$categorie->id}}">{{$categorie->title}}</option>
-											@endforeach	
-											</select>
-										</div>
-									</div>
+									
 									<div class="col-12 m-t20">
 										<div class="ml-auto m-b5">
 											<h3>2. Description</h3>
 										</div>
 									</div>
 									<div class="form-group col-12">
-										<label class="col-form-label">Course description</label>
+										<label class="col-form-label">chapter description</label>
 										<div>
 											<textarea class="form-control" name="description"> </textarea>
 										</div>
 									</div>
-									<div class="form-group col-12">
-									<label class="col-form-label">Course image</label>
-										
-										<label class="file">
-											<input type="file" id="file" name="photo">
-											<span class="file-custom"></span>
-										</label>
-									</div>
+									
 									
 									<div class="col-12">
-										<button type="submit" class="btn">Save course</button>
+										<button type="submit" class="btn">Save chapter</button>
 									</div>
 								</div>
 							</form>

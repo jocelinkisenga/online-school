@@ -14,5 +14,6 @@ Route::middleware(['auth','admin'])->prefix('admin')->group(function(){
 Route::middleware('confirmed')->group(function(){
 		Route::get('course',[App\Http\Controllers\CourseController::class,'create'])->name('course-create');
                 Route::post('course',[App\Http\Controllers\CourseController::class,'store'])->name('course-store');
-                Route::post('chapter/{course_id}',[App\Http\Controllers\ChapterController::class,'create'])->name('chapter-create');
+                Route::get('chapter/{course_id}',[App\Http\Controllers\ChapterController::class,'create'])->name('chapter-create');
+                Route::post('chapter/',[App\Http\Controllers\ChapterController::class,'store'])->name('chapter-store');
 });

@@ -24,7 +24,7 @@ class ChapterController extends Controller
      */
     public function create(int $course_id)
     {
-        //
+        return view('admin.add-chapter',['courseId'=>$course_id]);
     }
 
     /**

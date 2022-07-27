@@ -77,24 +77,16 @@
 										<li>
 									
 											<ul>
+
+											@foreach($course->chapters as $chapter)
 												<li>
 													<div class="curriculum-list-box">
-														<span>Lesson 1.</span> Introduction to UI Design
+														<span>chapter {{$chapter->id}}.</span><a href="{{route('chapter-detail',['id'=>$chapter->id])}}"> {{$chapter->title}}</a>
 													</div>
-													<span>120 minutes</span>
+													<span>{{$chapter->reading_time}} </span>
 												</li>
-												<li>
-													<div class="curriculum-list-box">
-														<span>Lesson 2.</span> User Research and Design
-													</div>
-													<span>60 minutes</span>
-												</li>
-												<li>
-													<div class="curriculum-list-box">
-														<span>Lesson 3.</span> Evaluating User Interfaces Part 1
-													</div>
-													<span>85 minutes</span>
-												</li>
+											@endforeach
+												
 											</ul>
 										</li>
 										

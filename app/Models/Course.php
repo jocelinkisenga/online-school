@@ -6,6 +6,7 @@ use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use App\Models\User;
 use App\Models\Category;
+use App\Models\Chapter;
 
 class Course extends Model
 {
@@ -18,5 +19,9 @@ class Course extends Model
 
     public function categorie(){
         return $this->belongsTo(Category::class);
+    }
+
+    public function chapters(){
+        return $this->hasMany(Chapter::class);
     }
 }

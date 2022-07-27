@@ -42,7 +42,7 @@ class ChapterController extends Controller
                 'course_id'=>$request->course_id,
                 'title'=>$request->title,
                 'description'=>$request->description,
-                'cover'=>$request->cover
+                'cover'=>$new_file
             ]);
         return redirect('/');
     }
@@ -53,9 +53,10 @@ class ChapterController extends Controller
      * @param  \App\Models\Chapter  $chapter
      * @return \Illuminate\Http\Response
      */
-    public function show(Chapter $chapter)
+    public function show(int $id)
     {
-        //
+        $chapter = Chapter::findOrFail($id);
+        return view('pages.chapter-details',['chapter'=>$chapter]);
     }
 
     /**

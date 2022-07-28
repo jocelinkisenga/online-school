@@ -83,13 +83,16 @@
 										<div class="profile-head">
 											<h3>My Courses</h3>
 											<div class="feature-filters style1 ml-auto">
-												<ul class="filters" data-toggle="buttons">
-													<li data-filter="" class="btn active">
-														<input type="radio">
-														<a href="#"><span>All</span></a> 
-													</li> 
-													</li>
-												</ul>
+												
+													@if(Auth::user()->role_teacher == 1)
+													
+														
+														<a href="{{route('course-create')}}" class="btn-success">create course</a> 
+													
+													@endif
+													 
+										
+												
 											</div>
 										</div>
 										<div class="courses-filter">
@@ -256,12 +259,7 @@
 														<input class="form-control" type="password" value="">
 													</div>
 												</div>
-												<div class="form-group row">
-													<label class="col-12 col-sm-4 col-md-4 col-lg-3 col-form-label">Re Type New Password</label>
-													<div class="col-12 col-sm-8 col-md-8 col-lg-7">
-														<input class="form-control" type="password" value="">
-													</div>
-												</div>
+												
 											</div>
 											<div class="row">
 												<div class="col-12 col-sm-4 col-md-4 col-lg-3">

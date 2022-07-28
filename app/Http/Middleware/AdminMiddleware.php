@@ -20,6 +20,9 @@ class AdminMiddleware
         if(Auth::user()->role_admin == 1){
             return $next($request);
         }
+        else{
+            return redirect('/');
+        }
         
     }
 }

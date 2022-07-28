@@ -27,7 +27,7 @@ class ConfirmedMiddleware
             }
             else {
 
-                dd("vous n'êtes pas elligible");
+                return redirect('/');
             }
 
 

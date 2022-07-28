@@ -27,6 +27,11 @@
 							<form action="{{route('logout')}}" method="POST">
 							@csrf
 								<button type="submit" class="btn btn-primary">logout</button>
+							</form>
+						</li>
+						<li>
+						
+								<a href="profile" class="btn btn-primary">profile</a>
 
 						</li>
 					@endauth

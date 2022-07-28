@@ -1,7 +1,7 @@
 <?php
 use Illuminate\Support\Facades\Route;
 
-Route::middleware(['auth','admin'])->prefix('admin')->group(function(){
+Route::middleware(['auth','admin'])->group(function(){
         Route::get('/dashboard',[App\Http\Controllers\DashboardController::class,'index'])->name('dashboard');
         Route::get('/candidatures',[App\Http\Controllers\CandidatureController::class,'index'])->name('candidature-index');
         Route::post('/candidature-confirm/',[App\Http\Controllers\CandidatureController::class,'update'])->name('candidature-confirm');

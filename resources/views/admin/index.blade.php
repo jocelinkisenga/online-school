@@ -178,6 +178,9 @@
 		</div>
 	</header>
 	<!-- header end -->
+
+
+
 	<!-- Left sidebar menu start -->
 	<div class="ttr-sidebar">
 		<div class="ttr-sidebar-wrapper content-scroll">
@@ -197,54 +200,74 @@
 			<nav class="ttr-sidebar-navi">
 				<ul>
 					<li>
-						<a href="index.html" class="ttr-material-button">
-							<span class="ttr-icon"><i class="ti-home"></i></span>
-		                	<span class="ttr-label">Dashborad</span>
-		                </a>
-		            </li>
-					<li>
-						<a href="courses.html" class="ttr-material-button">
-							<span class="ttr-icon"><i class="ti-book"></i></span>
-		                	<span class="ttr-label">Courses</span>
-		                </a>
-		            </li>
-					<li>
 						<a href="#" class="ttr-material-button">
 							<span class="ttr-icon"><i class="ti-email"></i></span>
-		                	<span class="ttr-label">Mailbox</span>
+		                	<span class="ttr-label">blog articles</span>
 		                	<span class="ttr-arrow-icon"><i class="fa fa-angle-down"></i></span>
 		                </a>
 		                <ul>
 		                	<li>
-		                		<a href="mailbox.html" class="ttr-material-button"><span class="ttr-label">Mail Box</span></a>
+		                		<a href="mailbox.html" class="ttr-material-button"><span class="ttr-label">all articles</span></a>
 		                	</li>
 		                	<li>
-		                		<a href="mailbox-compose.html" class="ttr-material-button"><span class="ttr-label">Compose</span></a>
+		                		<a href="wink" class="ttr-material-button"><span class="ttr-label">add article</span></a>
+		                	</li>
+							
+		                </ul>
+		            </li>
+				<li>
+						<a href="#" class="ttr-material-button">
+							<span class="ttr-icon"><i class="ti-email"></i></span>
+		                	<span class="ttr-label">Teacher</span>
+		                	<span class="ttr-arrow-icon"><i class="fa fa-angle-down"></i></span>
+		                </a>
+		                <ul>
+		                	<li>
+		                		<a href="mailbox.html" class="ttr-material-button"><span class="ttr-label">all teachers</span></a>
+		                	</li>
+		                	<li>
+		                		<a href="{{route('candidature-index')}}" class="ttr-material-button"><span class="ttr-label">teacher candidates</span></a>
+		                	</li>
+							
+		                </ul>
+		            </li>
+					<li>
+						<a href="#" class="ttr-material-button">
+							<span class="ttr-icon"><i class="ti-email"></i></span>
+		                	<span class="ttr-label">Courses</span>
+		                	<span class="ttr-arrow-icon"><i class="fa fa-angle-down"></i></span>
+		                </a>
+		                <ul>
+		                	<li>
+		                		<a href="mailbox.html" class="ttr-material-button"><span class="ttr-label">confirmed</span></a>
+		                	</li>
+		                	<li>
+		                		<a href="{{route('course_notConfirmed')}}" class="ttr-material-button"><span class="ttr-label">not confirmed</span></a>
 		                	</li>
 							<li>
-		                		<a href="mailbox-read.html" class="ttr-material-button"><span class="ttr-label">Mail Read</span></a>
+		                		<a href="mailbox-read.html" class="ttr-material-button"><span class="ttr-label">all courses</span></a>
 		                	</li>
 		                </ul>
 		            </li>
 					<li>
 						<a href="#" class="ttr-material-button">
 							<span class="ttr-icon"><i class="ti-calendar"></i></span>
-		                	<span class="ttr-label">Calendar</span>
+		                	<span class="ttr-label">categories</span>
 		                	<span class="ttr-arrow-icon"><i class="fa fa-angle-down"></i></span>
 		                </a>
 		                <ul>
 		                	<li>
-		                		<a href="basic-calendar.html" class="ttr-material-button"><span class="ttr-label">Basic Calendar</span></a>
+		                		<a href="{{route('categorie-create')}}" class="ttr-material-button"><span class="ttr-label">add categorie</span></a>
 		                	</li>
 		                	<li>
-		                		<a href="list-view-calendar.html" class="ttr-material-button"><span class="ttr-label">List View</span></a>
+		                		<a href="list-view-calendar.html" class="ttr-material-button"><span class="ttr-label">list categories</span></a>
 		                	</li>
 		                </ul>
 		            </li>
 					<li>
 						<a href="bookmark.html" class="ttr-material-button">
 							<span class="ttr-icon"><i class="ti-bookmark-alt"></i></span>
-		                	<span class="ttr-label">Bookmarks</span>
+		                	<span class="ttr-label">users</span>
 		                </a>
 		            </li>
 					<li>
@@ -253,27 +276,8 @@
 		                	<span class="ttr-label">Review</span>
 		                </a>
 		            </li>
-					<li>
-						<a href="add-listing.html" class="ttr-material-button">
-							<span class="ttr-icon"><i class="ti-layout-accordion-list"></i></span>
-		                	<span class="ttr-label">Add listing</span>
-		                </a>
-		            </li>
-					<li>
-						<a href="#" class="ttr-material-button">
-							<span class="ttr-icon"><i class="ti-user"></i></span>
-		                	<span class="ttr-label">My Profile</span>
-		                	<span class="ttr-arrow-icon"><i class="fa fa-angle-down"></i></span>
-		                </a>
-		                <ul>
-		                	<li>
-		                		<a href="user-profile.html" class="ttr-material-button"><span class="ttr-label">User Profile</span></a>
-		                	</li>
-		                	<li>
-		                		<a href="teacher-profile.html" class="ttr-material-button"><span class="ttr-label">Teacher Profile</span></a>
-		                	</li>
-		                </ul>
-		            </li>
+					
+				
 		            <li class="ttr-seperate"></li>
 				</ul>
 				<!-- sidebar menu end -->
@@ -282,6 +286,8 @@
 		</div>
 	</div>
 	<!-- Left sidebar menu end -->
+
+
 
 	<!--Main container start -->
 	<main class="ttr-wrapper">
@@ -402,95 +408,13 @@
 			</div>
 			<!-- Card END -->
 			<div class="row">
-				<!-- Your Profile Views Chart -->
-				<div class="col-lg-8 m-b30">
-					<div class="widget-box">
-						<div class="wc-title">
-							<h4>Your Profile Views</h4>
-						</div>
-						<div class="widget-inner">
-							<canvas id="chart" width="100" height="45"></canvas>
-						</div>
-					</div>
-				</div>
+		
 				<!-- Your Profile Views Chart END-->
-				<div class="col-lg-4 m-b30">
-					<div class="widget-box">
-						<div class="wc-title">
-							<h4>Notifications</h4>
-						</div>
-						<div class="widget-inner">
-							<div class="noti-box-list">
-								<ul>
-									<li>
-										<span class="notification-icon dashbg-gray">
-											<i class="fa fa-check"></i>
-										</span>
-										<span class="notification-text">
-											<span>Sneha Jogi</span> sent you a message.
-										</span>
-										<span class="notification-time">
-											<a href="#" class="fa fa-close"></a>
-											<span> 02:14</span>
-										</span>
-									</li>
-									<li>
-										<span class="notification-icon dashbg-yellow">
-											<i class="fa fa-shopping-cart"></i>
-										</span>
-										<span class="notification-text">
-											<a href="#">Your order is placed</a> sent you a message.
-										</span>
-										<span class="notification-time">
-											<a href="#" class="fa fa-close"></a>
-											<span> 7 Min</span>
-										</span>
-									</li>
-									<li>
-										<span class="notification-icon dashbg-red">
-											<i class="fa fa-bullhorn"></i>
-										</span>
-										<span class="notification-text">
-											<span>Your item is shipped</span> sent you a message.
-										</span>
-										<span class="notification-time">
-											<a href="#" class="fa fa-close"></a>
-											<span> 2 May</span>
-										</span>
-									</li>
-									<li>
-										<span class="notification-icon dashbg-green">
-											<i class="fa fa-comments-o"></i>
-										</span>
-										<span class="notification-text">
-											<a href="#">Sneha Jogi</a> sent you a message.
-										</span>
-										<span class="notification-time">
-											<a href="#" class="fa fa-close"></a>
-											<span> 14 July</span>
-										</span>
-									</li>
-									<li>
-										<span class="notification-icon dashbg-primary">
-											<i class="fa fa-file-word-o"></i>
-										</span>
-										<span class="notification-text">
-											<span>Sneha Jogi</span> sent you a message.
-										</span>
-										<span class="notification-time">
-											<a href="#" class="fa fa-close"></a>
-											<span> 15 Min</span>
-										</span>
-									</li>
-								</ul>
-							</div>
-						</div>
-					</div>
-				</div>
+			
 				<div class="col-lg-6 m-b30">
 					<div class="widget-box">
 						<div class="wc-title">
-							<h4>New Users</h4>
+							<h4>New courses</h4>
 						</div>
 						<div class="widget-inner">
 							<div class="new-user-list">
@@ -504,130 +428,46 @@
 											<span class="new-users-info">Visual Designer,Google Inc </span>
 										</span>
 										<span class="new-users-btn">
-											<a href="#" class="btn button-sm outline">Follow</a>
+											<a href="#" class="btn button-sm outline">confirm</a>
 										</span>
 									</li>
-									<li>
-										<span class="new-users-pic">
-											<img src="assets/images/testimonials/pic2.jpg" alt=""/>
-										</span>
-										<span class="new-users-text">
-											<a href="#" class="new-users-name"> Milano Esco </a>
-											<span class="new-users-info">Product Designer, Apple Inc </span>
-										</span>
-										<span class="new-users-btn">
-											<a href="#" class="btn button-sm outline">Follow</a>
-										</span>
-									</li>
+									
+								</ul>
+							</div>
+						</div>
+					</div>
+				</div>
+				
+				
+
+					<div class="col-lg-6 m-b30">
+					<div class="widget-box">
+						<div class="wc-title">
+							<h4>New teachers candidates</h4>
+						</div>
+						<div class="widget-inner">
+							<div class="new-user-list">
+								<ul>
 									<li>
 										<span class="new-users-pic">
 											<img src="assets/images/testimonials/pic1.jpg" alt=""/>
 										</span>
 										<span class="new-users-text">
-											<a href="#" class="new-users-name">Nick Bold  </a>
-											<span class="new-users-info">Web Developer, Facebook Inc </span>
+											<a href="#" class="new-users-name">Anna Strong </a>
+											<span class="new-users-info">Visual Designer,Google Inc </span>
 										</span>
 										<span class="new-users-btn">
-											<a href="#" class="btn button-sm outline">Follow</a>
+											<a href="#" class="btn button-sm outline">confirm</a>
 										</span>
 									</li>
-									<li>
-										<span class="new-users-pic">
-											<img src="assets/images/testimonials/pic2.jpg" alt=""/>
-										</span>
-										<span class="new-users-text">
-											<a href="#" class="new-users-name">Wiltor Delton </a>
-											<span class="new-users-info">Project Manager, Amazon Inc </span>
-										</span>
-										<span class="new-users-btn">
-											<a href="#" class="btn button-sm outline">Follow</a>
-										</span>
-									</li>
-									<li>
-										<span class="new-users-pic">
-											<img src="assets/images/testimonials/pic3.jpg" alt=""/>
-										</span>
-										<span class="new-users-text">
-											<a href="#" class="new-users-name">Nick Stone </a>
-											<span class="new-users-info">Project Manager, Amazon Inc  </span>
-										</span>
-										<span class="new-users-btn">
-											<a href="#" class="btn button-sm outline">Follow</a>
-										</span>
-									</li>
+									
 								</ul>
 							</div>
 						</div>
 					</div>
 				</div>
-				<div class="col-lg-6 m-b30">
-					<div class="widget-box">
-						<div class="wc-title">
-							<h4>Orders</h4>
-						</div>
-						<div class="widget-inner">
-							<div class="orders-list">
-								<ul>
-									<li>
-										<span class="orders-title">
-											<a href="#" class="orders-title-name">Anna Strong </a>
-											<span class="orders-info">Order #02357 | Date 12/08/2019</span>
-										</span>
-										<span class="orders-btn">
-											<a href="#" class="btn button-sm red">Unpaid</a>
-										</span>
-									</li>
-									<li>
-										<span class="orders-title">
-											<a href="#" class="orders-title-name">Revenue</a>
-											<span class="orders-info">Order #02357 | Date 12/08/2019</span>
-										</span>
-										<span class="orders-btn">
-											<a href="#" class="btn button-sm red">Unpaid</a>
-										</span>
-									</li>
-									<li>
-										<span class="orders-title">
-											<a href="#" class="orders-title-name">Anna Strong </a>
-											<span class="orders-info">Order #02357 | Date 12/08/2019</span>
-										</span>
-										<span class="orders-btn">
-											<a href="#" class="btn button-sm green">Paid</a>
-										</span>
-									</li>
-									<li>
-										<span class="orders-title">
-											<a href="#" class="orders-title-name">Revenue</a>
-											<span class="orders-info">Order #02357 | Date 12/08/2019</span>
-										</span>
-										<span class="orders-btn">
-											<a href="#" class="btn button-sm green">Paid</a>
-										</span>
-									</li>
-									<li>
-										<span class="orders-title">
-											<a href="#" class="orders-title-name">Anna Strong </a>
-											<span class="orders-info">Order #02357 | Date 12/08/2019</span>
-										</span>
-										<span class="orders-btn">
-											<a href="#" class="btn button-sm green">Paid</a>
-										</span>
-									</li>
-								</ul>
-							</div>
-						</div>
-					</div>
-				</div>
-				<div class="col-lg-12 m-b30">
-					<div class="widget-box">
-						<div class="wc-title">
-							<h4>Basic Calendar</h4>
-						</div>
-						<div class="widget-inner">
-							<div id="calendar"></div>
-						</div>
-					</div>
-				</div>
+
+
 			</div>
 		</div>
 	</main>

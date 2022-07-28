@@ -379,6 +379,9 @@
 						</div>				      
 					</div>
 				</div>
+
+
+
 				<div class="col-md-6 col-lg-3 col-xl-3 col-sm-6 col-12">
 					<div class="widget-card widget-bg4">					 
 						<div class="wc-item">
@@ -419,19 +422,21 @@
 						<div class="widget-inner">
 							<div class="new-user-list">
 								<ul>
+
+								@foreach($new_courses as $course)
 									<li>
 										<span class="new-users-pic">
-											<img src="assets/images/testimonials/pic1.jpg" alt=""/>
+											<img src="{{asset('uploads/uploads/'.$course->photo)}}" alt=""/>
 										</span>
 										<span class="new-users-text">
-											<a href="#" class="new-users-name">Anna Strong </a>
-											<span class="new-users-info">Visual Designer,Google Inc </span>
+											<a href="#" class="new-users-name"> {{$course->title}} </a>
+											<span class="new-users-info">{{$course->user->name}}</span>
 										</span>
 										<span class="new-users-btn">
 											<a href="#" class="btn button-sm outline">confirm</a>
 										</span>
 									</li>
-									
+								@endforeach
 								</ul>
 							</div>
 						</div>

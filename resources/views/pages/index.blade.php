@@ -531,7 +531,7 @@
 											<li><a href="#"><i class="fa fa-clock-o"></i> 7:00am 8:00am</a></li>
 											<li><a href="#"><i class="fa fa-map-marker"></i> Berlin, Germany</a></li>
 										</ul>
-										<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the..</p>
+										<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry s standard dummy text ever since the..</p>
 									</div>
 								</div>
 							</div>
@@ -620,44 +620,7 @@
 						</div>
 					</div>
 					<div class="recent-news-carousel owl-carousel owl-btn-1 col-12 p-lr0">
-						<div class="item">
-							<div class="recent-news">
-								<div class="action-box">
-									<img src="assets/images/blog/latest-blog/pic1.jpg" alt="">
-								</div>
-								<div class="info-bx">
-									<ul class="media-post">
-										<li><a href="#"><i class="fa fa-calendar"></i>Jan 02 2019</a></li>
-										<li><a href="#"><i class="fa fa-user"></i>By William</a></li>
-									</ul>
-									<h5 class="post-title"><a href="blog-details.html">This Story Behind Education Will Haunt You Forever.</a></h5>
-									<p>Knowing that, you’ve optimised your pages countless amount of times, written tons.</p>
-									<div class="post-extra">
-										<a href="#" class="btn-link">READ MORE</a>
-										<a href="#" class="comments-bx"><i class="fa fa-comments-o"></i>20 Comment</a>
-									</div>
-								</div>
-							</div>
-						</div>
-						<div class="item">
-							<div class="recent-news">
-								<div class="action-box">
-									<img src="assets/images/blog/latest-blog/pic2.jpg" alt="">
-								</div>
-								<div class="info-bx">
-									<ul class="media-post">
-										<li><a href="#"><i class="fa fa-calendar"></i>Feb 05 2019</a></li>
-										<li><a href="#"><i class="fa fa-user"></i>By John</a></li>
-									</ul>
-									<h5 class="post-title"><a href="blog-details.html">What Will Education Be Like In The Next 50 Years?</a></h5>
-									<p>As desperate as you are right now, you have done everything you can on your.</p>
-									<div class="post-extra">
-										<a href="#" class="btn-link">READ MORE</a>
-										<a href="#" class="comments-bx"><i class="fa fa-comments-o"></i>14 Comment</a>
-									</div>
-								</div>
-							</div>
-						</div>
+						
 						<div class="item">
 							<div class="recent-news">
 								<div class="action-box">

@@ -7,7 +7,7 @@ Route::middleware(['auth','admin'])->group(function(){
         Route::post('/candidature-confirm/',[App\Http\Controllers\CandidatureController::class,'update'])->name('candidature-confirm');
         Route::get('/categorie',[App\Http\Controllers\CategoryController::class,'create'])->name('categorie-create');
         Route::post('/categorie',[App\Http\Controllers\CategoryController::class,'store'])->name('categorie-store');
-        Route::get('/courses',[App\Http\Controllers\CourseController::class,'not_confirmed'])->name('course_notConfirmed');
+        Route::get('/unconfirmed',[App\Http\Controllers\CourseController::class,'not_confirmed'])->name('course_notConfirmed');
         Route::get('/course/{id}',[App\Http\Controllers\CourseController::class,'update'])->name('course-confirm');
 });
 

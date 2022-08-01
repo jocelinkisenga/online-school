@@ -15,7 +15,9 @@ class CourseController extends Controller
      */
     public function index()
     {
-        return  view('pages.courses');
+        $courses = Course::whereConfirmed(1)->get();
+
+        return  view('pages.courses',['courses'=>$courses]);
     }
 
      /**

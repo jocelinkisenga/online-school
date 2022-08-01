@@ -37,13 +37,12 @@
 								</div>
 							</div>
 							<div class="widget widget_archive">
-                                <h5 class="widget-title style-1">All Courses</h5>
+                                <h5 class="widget-title style-1">categories</h5>
                                 <ul>
-                                    <li class="active"><a href="#">General</a></li>
+                                    @foreach($course->categorie as $categorie)
                                     <li><a href="#">IT & Software</a></li>
-                                    <li><a href="#">Photography</a></li>
-                                    <li><a href="#">Programming Language</a></li>
-                                    <li><a href="#">Technology</a></li>
+                                    
+                                    @endforeach
                                 </ul>
                             </div>
 							<div class="widget">
@@ -90,19 +89,21 @@
 						</div>
 						<div class="col-lg-9 col-md-8 col-sm-12">
 							<div class="row">
+
+							@foreach($courses as $course)
 								<div class="col-md-6 col-lg-4 col-sm-6 m-b30">
 									<div class="cours-bx">
 										<div class="action-box">
-											<img src="assets/images/courses/pic1.jpg" alt="">
-											<a href="#" class="btn">Read More</a>
+											<img src="{{asset('uploads/uploads/'.$course->photo)}}" alt="">
+											<a href="{{route('course-detail',['id'=>$course->id])}}" class="btn">Read More</a>
 										</div>
 										<div class="info-bx text-center">
-											<h5><a href="#">Introduction EduChamp – LMS plugin</a></h5>
-											<span>Programming</span>
+											<h5><a href="#">{{$course->title}}</a></h5>
+											<span>{{$course->categorie->title}}</span>
 										</div>
 										<div class="cours-more-info">
 											<div class="review">
-												<span>3 Review</span>
+												<span></span>
 												<ul class="cours-star">
 													<li class="active"><i class="fa fa-star"></i></li>
 													<li class="active"><i class="fa fa-star"></i></li>
@@ -112,13 +113,15 @@
 												</ul>
 											</div>
 											<div class="price">
-												<del>$190</del>
-												<h5>$120</h5>
+												
+												<h5>{{$course->user->name}}</h5>
 											</div>
 										</div>
 									</div>
 								</div>
 								
+							@endforeach
+
 								<div class="col-lg-12 m-b20">
 									<div class="pagination-bx rounded-sm gray clearfix">
 										<ul class="pagination">

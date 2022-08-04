@@ -39,8 +39,8 @@
 							<div class="widget widget_archive">
                                 <h5 class="widget-title style-1">categories</h5>
                                 <ul>
-                                    @foreach($courses->categorie() as $categorie)
-                                    <li><a href="#">IT & Software</a></li>
+                                    @foreach($categories as $categorie)
+                                    <li><a href="#">{{$categorie->title}}</a></li>
                                     
                                     @endforeach
                                 </ul>

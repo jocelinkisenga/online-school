@@ -6,6 +6,7 @@ use App\Models\Course;
 use App\Models\Category;
 use Illuminate\Http\Request;
 
+
 class CourseController extends Controller
 {
     /**
@@ -16,8 +17,11 @@ class CourseController extends Controller
     public function index()
     {
         $courses = Course::whereConfirmed(1)->get();
+        $categories = Category::all();     
 
-        return  view('pages.courses',['courses'=>$courses]);
+
+        return  view('pages.courses',['courses'=>$courses,'categories'=>$categories]);
+        
     }
 
      /**
